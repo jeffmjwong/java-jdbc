@@ -7,6 +7,7 @@ public class Main {
 
 		try {
 			ConnectComponent comp = new ConnectComponent();
+			System.out.println("Hello JDBC!");
 
 			if (comp.tryConnection()) {
 				System.out.println("Demo m2c1:");
@@ -18,6 +19,8 @@ public class Main {
 		} catch (Exception exception) {
 			util.ExceptionHandler.handleException(exception);
 		}
+
+		System.out.println("Hello again JDBC!");
 	}
 
 }
