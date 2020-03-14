@@ -9,7 +9,11 @@ public class ProductsComponent {
 
 		final Connection connection = DriverManager.getConnection(url);
 
-		return connection.isValid(2);
+		final boolean isValid = connection.isValid(2);
+
+		connection.close();
+
+		return isValid;
     }
 }
 
