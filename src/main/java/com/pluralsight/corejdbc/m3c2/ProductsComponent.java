@@ -7,7 +7,7 @@ public class ProductsComponent {
 	public boolean tryConnection() throws Exception {
 		Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
 		
-		Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels?user=root&password=pluralsight&serverTimezone=UTC");			
+		Connection connection = DriverManager.getConnection("jdbc:mysql://jeff-mysql-sydney.c74usuhv8zuq.ap-southeast-2.rds.amazonaws.com:3306/classicmodels?user=root&password=jeffpluralsight&serverTimezone=UTC");
 			
 		boolean isValid = connection.isValid(2);
 			
