@@ -1,9 +1,7 @@
 package com.pluralsight.corejdbc.m3c1;
 
 public class Main {
-
 	public static void main(String[] args) throws Exception {
-
 		try {
 			ProductsComponent comp = new ProductsComponent();
 
