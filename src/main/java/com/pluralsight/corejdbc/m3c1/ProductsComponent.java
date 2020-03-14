@@ -5,16 +5,11 @@ import java.sql.DriverManager;
 
 public class ProductsComponent {
 	public boolean tryConnection() throws Exception {
-		Connection connection =
-			DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels?"
-					+ "user=root&password=pluralsight&serverTimezone=UTC");
-		
-		boolean isValid = connection.isValid(2);
+		final String url = "jdbc:mysql://jeff-mysql-sydney.c74usuhv8zuq.ap-southeast-2.rds.amazonaws.com/classicmodels?user=root&password=jeffpluralsight&serverTimezone=UTC";
 
-		connection.close();
+		final Connection connection = DriverManager.getConnection(url);
 
-		return isValid;
+		return false;
     }
-
 }
 
