@@ -16,9 +16,10 @@ public class DataSourceProducer {
 
 		if (mySqldataSource == null) {
 			mySqldataSource = new MysqlDataSource();
-			mySqldataSource.setPassword("pluralsight");
+			mySqldataSource.setPassword("jeffpluralsight");
 			mySqldataSource.setUser("root");
-			mySqldataSource.setURL("jdbc:mysql://localhost:3306/classicmodels?serverTimezone=UTC");
+//			mySqldataSource.setURL("jdbc:mysql://localhost:3306/classicmodels?serverTimezone=UTC");
+			mySqldataSource.setURL("jdbc:mysql://jeff-mysql-sydney.c74usuhv8zuq.ap-southeast-2.rds.amazonaws.com/classicmodels?serverTimezone=UTC");
 		}
 		return mySqldataSource;
 	}
