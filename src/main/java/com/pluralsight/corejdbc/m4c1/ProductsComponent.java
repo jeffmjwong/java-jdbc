@@ -14,6 +14,8 @@ public class ProductsComponent {
 //				"jdbc:mysql://localhost:3306/classicmodels?user=root&password=pluralsight&serverTimezone=UTC");
 				"jdbc:mysql://jeff-mysql-sydney.c74usuhv8zuq.ap-southeast-2.rds.amazonaws.com:3306/classicmodels?user=root&password=jeffpluralsight&serverTimezone=UTC");
 		Statement statement = connection.createStatement();
-		statement.executeQuery("SELECT * FROM products");
+		ResultSet resultSet = statement.executeQuery("SELECT * FROM products");
+
+		System.out.println(resultSet);
 	}
 }
