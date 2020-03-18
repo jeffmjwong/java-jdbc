@@ -4,6 +4,7 @@ import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.ResultSet;
+import java.util.Arrays;
 
 
 public class ProductsComponent {
@@ -14,9 +15,9 @@ public class ProductsComponent {
 				"jdbc:mysql://localhost:3306/classicmodels?user=root&password=pluralsight&serverTimezone=UTC");
 //				"jdbc:mysql://jeff-mysql-sydney.c74usuhv8zuq.ap-southeast-2.rds.amazonaws.com:3306/classicmodels?user=root&password=jeffpluralsight&serverTimezone=UTC");
 		Statement statement = connection.createStatement();
-		ResultSet resultSet = statement.executeQuery("SELECT * FROM products");
+		ResultSet resultSet = statement.executeQuery("SELECT COUNT(*) FROM products");
 
-		System.out.println(resultSet);
+		System.out.println(resultSet.next());
 
 		resultSet.close();
 		statement.close();
