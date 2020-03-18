@@ -17,5 +17,7 @@ public class ProductsComponent {
 		ResultSet resultSet = statement.executeQuery("SELECT * FROM products");
 
 		System.out.println(resultSet);
+
+		resultSet.close();
 	}
 }
