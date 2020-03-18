@@ -20,5 +20,6 @@ public class ProductsComponent {
 
 		resultSet.close();
 		statement.close();
+		connection.close();
 	}
 }
