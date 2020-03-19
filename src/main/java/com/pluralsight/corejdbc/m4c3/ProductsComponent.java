@@ -14,7 +14,7 @@ public class ProductsComponent {
 
 				PreparedStatement preparedStatement = connection
 						.prepareStatement("SELECT * FROM products");
-				ResultSet resultSet = preparedStatement.executeQuery();) {
+				ResultSet resultSet = preparedStatement.executeQuery()) {
 
 			while (resultSet.next()) {
 
