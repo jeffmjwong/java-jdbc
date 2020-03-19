@@ -5,7 +5,7 @@ import java.sql.ResultSet;
 
 public class ProductNavUtility {
 	
-	ResultSet resultSet = null;
+	ResultSet resultSet;
 	
 	public ProductNavUtility(ResultSet resultSet) {
 		this.resultSet = resultSet;
