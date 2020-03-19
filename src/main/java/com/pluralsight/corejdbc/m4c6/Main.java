@@ -32,7 +32,7 @@ public class Main {
 			System.out.println("Row at position " + rowId);
 			comp.printAt(rowId);
 
-			System.out.println("Row " + (relativePos < 0 ? "Befor" : "After") + " row " + relativePos);
+			System.out.println("Row " + (relativePos < 0 ? "Before" : "After") + " row " + relativePos);
 			comp.printRelative(relativePos);
 
 			System.out.println("All products in reverse order");
