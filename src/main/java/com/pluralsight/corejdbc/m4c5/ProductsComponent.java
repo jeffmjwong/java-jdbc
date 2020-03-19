@@ -20,9 +20,9 @@ public class ProductsComponent {
 
 			while (resultSet.next()) {
 
-				String name = resultSet.getString(1);
-				int quantity = resultSet.getInt(2);
-				double price = resultSet.getDouble(3);
+				String name = resultSet.getString("productName");
+				int quantity = resultSet.getInt("quantityInStock");
+				double price = resultSet.getDouble("buyPrice");
 
 				System.out.format("%-45s %5d %10.2f%n", name, quantity, price);
 
