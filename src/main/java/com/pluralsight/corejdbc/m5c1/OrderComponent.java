@@ -5,9 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 public class OrderComponent {
-
 	public void updateOrderQuantity(int orderNumber, String productCode, int newQuantity) throws Exception {
-
 		String query = "UPDATE orderdetails "
 					 + "SET quantityOrdered=? " 
 					 + "WHERE orderNumber = ? "

@@ -3,7 +3,6 @@ package com.pluralsight.corejdbc.m5c1;
 public class Main {
 
 	public static void main(String[] args) throws Exception {
-
 		try {
 			int orderNumber = 10138;
 			String productNumber = "S24_2022";
