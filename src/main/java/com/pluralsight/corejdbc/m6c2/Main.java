@@ -7,7 +7,7 @@ public class Main {
 
 			ProductComponent comp = new ProductComponent();
 
-			comp.listProductsBy("Motorcycles");
+			comp.listProductsBy("Planes");
 
 		} catch (Exception exception) {
 			util.ExceptionHandler.handleException(exception);

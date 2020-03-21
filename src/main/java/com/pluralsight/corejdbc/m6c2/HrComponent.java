@@ -23,10 +23,7 @@ public class HrComponent {
 		
 		callableStatement.execute();
 		
-		String oldEmail = callableStatement.getString(2);
-		
-		return oldEmail;
-
+		return callableStatement.getString(2);
 	}
 	}
 
