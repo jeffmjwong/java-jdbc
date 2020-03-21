@@ -6,22 +6,17 @@ import java.sql.PreparedStatement;
 
 public class OrderComponent {
 	public void updateOrderQuantity(int orderNumber, String productCode, int newQuantity) throws Exception {
-		String query = "UPDATE orderdetails "
-					 + "SET quantityOrdered=? " 
-					 + "WHERE orderNumber = ? "
-					 + "  AND productCode = ?";
+		final String query = "UPDATE orderdetails set quantityOrdered = ? where orderNumber = ? AND productCode = ?";
 
-		try (Connection connection = DriverManager.getConnection(
-				"jdbc:mysql://localhost:3306/classicmodels?user=root&password=pluralsight&serverTimezone=UTC");
+		try (
+				Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/classicmodels?user=root&password=pluralsight&serverTimezone=UTC");
+				PreparedStatement statement = connection.prepareStatement(query)
+		) {
+			statement.setInt(1, newQuantity);
+			statement.setInt(2, orderNumber);
+			statement.setString(3, productCode);
 
-				PreparedStatement preparedStatement = connection.prepareStatement(query);) {
-
-			preparedStatement.setInt(1, newQuantity);
-			preparedStatement.setInt(2, orderNumber);
-			preparedStatement.setString(3, productCode);
-			preparedStatement.executeUpdate();
-
+			statement.executeUpdate();
 		}
 	}
-
 }

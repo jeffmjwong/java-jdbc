@@ -6,7 +6,7 @@ public class Main {
 		try {
 			int orderNumber = 10138;
 			String productNumber = "S24_2022";
-			int newQuantity = 88;
+			int newQuantity = 11;
 			
 			OrderComponent comp = new OrderComponent();
 			comp.updateOrderQuantity(orderNumber, productNumber, newQuantity);
