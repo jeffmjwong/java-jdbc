@@ -37,8 +37,7 @@ public class Main implements Runnable{
 		
 	}
 	public static double randomize(double min, double max){
-	    double x = (int)(Math.random()*((max-min)+1))+min;
-	    return x;
+	    return (int)(Math.random()*((max-min)+1))+min;
 	}
 	
 
